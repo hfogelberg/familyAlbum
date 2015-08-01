@@ -1,0 +1,34 @@
+<template name='addPage'>
+	<h2>Lägg till sida</h2>
+
+	<form class='newArtwork form-horizontal'>
+		<div class='form-group '>
+			<div class='col-sm-offset-2 col-sm-10 picUploads'>
+				<input type='file' name='pic' accept='image/*' class='file_bag'>
+				
+			  {{#each files}}
+					<div>
+						{{#unless complete}}
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+							    {{percent_uploaded}} %
+							  </div>
+							</div>
+						{{/unless}}
+					</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class='form-group '>
+			<label for='description' class='col-sm-2'>Beskrivning</label>
+			<div class='col-sm-10'>
+				<textarea class='form-control description' rows='5' name='description'></textarea>
+			</div>
+		</div>
+
+		<div class='col-offset-sm-2 col-sm-10'>
+			<input type='button' class='btn btn-primary addPageBtn' value='Spara' >
+		</div>
+	</form>
+</template>

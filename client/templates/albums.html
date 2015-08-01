@@ -8,7 +8,10 @@
 
 <template name='album'>
 	<p>
-		<img src='http://res.cloudinary.com/ginkgo/image/upload/w_600,c_fill/{{image}}'>
+		<a href='/pages/{{_id}}' class='image'>
+			<img src='http://res.cloudinary.com/ginkgo/image/upload/w_600,c_fill/{{image}}'>
+		</a>
+
 		<div class='albumComment'>
 			{{description}}
 		</div>

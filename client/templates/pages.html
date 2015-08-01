@@ -1,0 +1,16 @@
+<template name='pages'>
+	<h2>Sidor</h2>
+
+	{{> addPage}}
+	{{#each pages}}
+		<p>
+			<a href='/page/{{_id}}' class='image'>
+				<img src='http://res.cloudinary.com/ginkgo/image/upload/w_400,c_fill/{{image}}'>
+			</a>
+
+			<div class='pageComment'>
+				{{description}}
+			</div>
+		</p>
+	{{/each}}
+</template>
