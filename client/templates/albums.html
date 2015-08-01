@@ -1,0 +1,16 @@
+<template name='albums'>
+	<ul class='list-usntyled'>
+		{{#each albums}}
+			{{>album}}
+		{{/each}}
+	</ul>
+</template>
+
+<template name='album'>
+	<p>
+		<img src='http://res.cloudinary.com/ginkgo/image/upload/w_600,c_fill/{{image}}'>
+		<div class='albumComment'>
+			{{description}}
+		</div>
+	</p>
+</template>

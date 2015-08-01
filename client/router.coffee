@@ -5,3 +5,13 @@ Router.map ->
     template: 'home'
 
 	@route 'admin'
+
+	@route 'addAlbum'
+
+	@route 'albums',
+		path: 'albums',
+		template: 'albums'
+		waitOn: ->
+			@subscribe 'getAlbums'
+		data: albums: ->
+			Albums.find()
