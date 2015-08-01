@@ -1,7 +1,9 @@
 <template name='pages'>
 	<h2>Sidor</h2>
 
-	{{> addPage}}
+	{{#if currentUser}}
+		{{> addPage}}
+	{{/if}}
 	{{#each pages}}
 		<p>
 			<a href='/page/{{_id}}' class='image'>

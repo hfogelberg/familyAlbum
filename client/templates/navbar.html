@@ -11,9 +11,11 @@
 			</div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-					<li><a href="/"><i class="glyphicon glyphicon-home"></i>Home</a></li>
+					<li><a href="/"><i class="glyphicon glyphicon-home"></i>Hem</a></li>
 					<li><a href='/albums'>Album</a></li>
-					<li><a href="/addAlbum">Nytt album</a></li>
+					{{#if currentUser}}
+						<li><a href="/addAlbum">Nytt album</a></li>
+					{{/if}}
 					<ul class="nav navbar-nav navbar-right">
 						{{> loginButtons}}
 					</ul>
